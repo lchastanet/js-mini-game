@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/grid.css">
+    <title>Jeu de plateau</title>
+</head>
+<body>
+    <h1>Ninja Battle</h1>
+    <div class="container">
+
+        <div class="players">
+            <h2>Ninja 1</h2>
+            <div class="frontboy">
+                <img src="./assets/ninja-player1.png" alt="boy figure">
+            </div>
+            <div class="group-btn">
+                <button class="btn attack">Attaquer</button>
+                <button class="btn defend">Défendre</button>
+            </div>
+            <div class="life"></div>
+        </div>
+
+        <div id="grid-container">
+            <!-- Ici ma grille -->
+        </div>
+
+        <div class="players">
+            <h2>Ninja 2</h2>
+            <img class="backgirl" src="./assets/ninja-player2.png" alt="girl figure">
+            <div class="group-btn">
+                <button class="btn attack">Attaquer</button>
+                <button class="btn defend">Défendre</button>
+            </div>
+            <div class="life"></div>
+        </div>
+    </div>
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>

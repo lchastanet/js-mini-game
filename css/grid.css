@@ -1,0 +1,10 @@
+#grid-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(10, 50px);
+    grid-template-rows: repeat(10, 50px);
+    background-color: #f1f1f1;
+    border: 1px solid #000;
+    border-radius: 1%;
+    padding: 2px;
+}
