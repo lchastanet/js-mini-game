@@ -23,6 +23,9 @@ export default class Grid {
 
                 let id = i + 1 + "-" + (j + 1); // Chaine de caractère mais qui est aussi un id unique
                 element.id = id; // ajout de l'id a l element html
+                element.addEventListener("click", (e) =>
+                    console.log(e.target.id)
+                );
                 grid.push(id); // J'ajoute l'id au tableau
             }
         }

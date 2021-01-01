@@ -87,5 +87,3 @@ let player2 = new Players(
     "url('assets/ninja-player2.png')",
     "backgirl"
 );
-
-console.log(weapons);
