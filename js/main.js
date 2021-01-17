@@ -1,7 +1,7 @@
 import Grid from "./grid.js";
-import Weapons from "./weapons.js";
-import Players from "./players.js";
-import Obstacles from "./obstacles.js";
+import Weapon from "./weapon.js";
+import Player from "./player.js";
+import Obstacle from "./obstacle.js";
 
 let grid = new Grid();
 
@@ -9,32 +9,20 @@ let obstacles = [];
 let weapons = [];
 
 //génération des obstacles
-for (let i = 0; i < 4; i++) {
-    let tree = new Obstacles(grid.getEmptyCoord(), "url('assets/tree.png')");
+for (let i = 0; i < 10; i++) {
+    let tree = new Obstacle(grid.getEmptyCoord());
 
     obstacles.push(tree);
 }
 
 // Instanciation de mes class armes
-weapons.push(
-    new Weapons(grid.getEmptyCoord(), "url('assets/gun.png')", "gun", 100)
-);
-weapons.push(
-    new Weapons(grid.getEmptyCoord(), "url('assets/knife.png')", "knife", 20)
-);
-weapons.push(
-    new Weapons(grid.getEmptyCoord(), "url('assets/sword.png')", "sword", 15)
-);
-weapons.push(
-    new Weapons(grid.getEmptyCoord(), "url('assets/spade.png')", "spade", 10)
-);
+weapons.push(new Weapon(grid.getEmptyCoord(), "gun", 100));
+weapons.push(new Weapon(grid.getEmptyCoord(), "knife", 20));
+weapons.push(new Weapon(grid.getEmptyCoord(), "sword", 15));
+weapons.push(new Weapon(grid.getEmptyCoord(), "spade", 10));
 
 // Instanciation de mes class players
-let player1 = new Players(
-    grid.getEmptyCoord(),
-    "url('assets/ninja-player1.png')",
-    "frontboy"
-);
+let player1 = new Player(grid.getEmptyCoord(), "playerOne");
 
 let gap = addGap(player1.position);
 
@@ -82,8 +70,4 @@ gap.forEach(
     (item) => (grid.state = grid.state.filter((elem) => elem !== item))
 );
 
-let player2 = new Players(
-    grid.getEmptyCoord(),
-    "url('assets/ninja-player2.png')",
-    "backgirl"
-);
+let player2 = new Player(grid.getEmptyCoord(), "playerTwo");

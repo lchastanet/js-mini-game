@@ -1,0 +1,23 @@
+{
+  "name": "js-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/friexo/js-mini-game.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/friexo/js-mini-game/issues"
+  },
+  "homepage": "https://github.com/friexo/js-mini-game#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.3.1"
+  }
+}

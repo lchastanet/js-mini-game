@@ -1,12 +1,11 @@
 export default class Item {
-    constructor(position, img) {
-        this.img = img;
+    constructor(position, name) {
+        this.name = name;
         this.position = this.generate(position);
     }
 
     generate(position) {
-        document.getElementById(position).style.backgroundImage = this.img;
-        document.getElementById(position).style.backgroundSize = "cover";
+        document.getElementById(position).classList.add(this.name);
 
         return position;
     }

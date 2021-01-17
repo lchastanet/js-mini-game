@@ -8,25 +8,23 @@ export default class Grid {
 
         let grid = [];
 
-        // Cette boucle génère 10 lignes
         for (let i = 0; i < size; i++) {
-            // Cette boucle génère 10 colonnes
             for (let j = 0; j < size; j++) {
-                let element = document.createElement("div"); // Création des elements div
-                element.classList.add("cell"); // Ajout des class cell à mes div
+                let element = document.createElement("div");
+                element.classList.add("cell");
 
                 if ((i + j) % 2 == 0) {
-                    element.classList.add("yellowbg"); // Je fais en sorte que une case sur deux soit jaune avec un modulo
+                    element.classList.add("darkenCell");
                 }
 
-                container.appendChild(element); // J'ajoute l'élément enfant au parent
+                container.appendChild(element);
 
-                let id = i + 1 + "-" + (j + 1); // Chaine de caractère mais qui est aussi un id unique
-                element.id = id; // ajout de l'id a l element html
+                let id = i + 1 + "-" + (j + 1);
+                element.id = id;
                 element.addEventListener("click", (e) =>
                     console.log(e.target.id)
                 );
-                grid.push(id); // J'ajoute l'id au tableau
+                grid.push(id);
             }
         }
 
